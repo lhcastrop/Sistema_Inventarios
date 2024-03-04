@@ -16,7 +16,7 @@ function App() {
                 <AuthContextProvider>
             <Container className={sidebarOpen ? "active" : ""}>
               <section className="ContentSidebar">Sidebar</section>
-              <section className="ContenMenuambur">Menu amburguesa</section>
+              <section className="ContenMenuambur">Menu Hamburguesa</section>
               <section className="ContentRoutes">
               <MyRoutes/>  
               </section>
