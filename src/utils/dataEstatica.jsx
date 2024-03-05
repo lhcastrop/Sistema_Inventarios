@@ -27,14 +27,14 @@ export const DesplegableUser = [
 //data SIDEBAR
 export const LinksArray = [
   {
-    label: "Home",
+    label: "Inicio",
     icon: <AiOutlineHome />,
     to: "/",
   },
   {
-    label: "Kardex",
+    label: "Movimientos",
     icon: <v.iconocategorias />,
-    to: "/kardex",
+    to: "/movimientos",
   },
   {
     label: "Reportes",
