@@ -2,7 +2,7 @@ import styled from "styled-components";
 export function HomeTemplate(){
     return(<Container>
           <h1>
-          Home Template
+          Pagina de Inicio en Proceso...
          </h1> 
     </Container>       
     );
