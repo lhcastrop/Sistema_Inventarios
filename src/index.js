@@ -18,7 +18,6 @@ export {  } from './main';
 export { Home } from './pages/Home';
 export { MyRoutes } from './routers/routes';
 export { DataModulosConfiguracion, DesplegableUser, LinksArray, SecondarylinksArray, TemasData, TipoDocData, TipouserData } from './utils/dataEstatica';
-export * from './components';
 
 
 
@@ -31,9 +30,10 @@ export * from './components/organismos/sidebar/SidebarCard.jsx';
 export * from './components/atomos/Icono';
 export * from './components/moleculas/Btnsave';
 export * from './components/templates/HomeTemplate';
-export * from './components/organismos';
 
 export * from './store/AuthStore';
+
+
 
 export * from './store/UsuariosStore';
 
@@ -47,3 +47,6 @@ export * from './hooks/ProtectedRoute'
 
 
 export { InsertarUsuarios } from './supabase/crudUsuarios';
+export * from './components/organismos/formularios/InputText';
+export * from './components/organismos/FooterLogin';
+export * from './components/organismos/formularios/RegistrarAdmin';

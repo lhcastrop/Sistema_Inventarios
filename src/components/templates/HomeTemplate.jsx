@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import {Btnsave, useAuthStore} from "../../index"
 export function HomeTemplate(){
-    return(<Container>
-          <h1>
-          Pagina de Inicio en Proceso...
-         </h1> 
+    const {signOut} = useAuthStore();
+    return(
+    <Container>
+          <h1>Home template</h1>
+          <Btnsave titulo="Cerrar sesion"
+          bgcolor="#fff" funcion={signOut}/>
     </Container>       
     );
 }
