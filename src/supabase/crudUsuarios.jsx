@@ -12,3 +12,6 @@ export const InsertarUsuarios =async(p)=>{
     if (data) return data;
 
 }
+export const MostrarUsuarios =async ()=>{
+    
+}
