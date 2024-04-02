@@ -28,7 +28,10 @@ export * from './components/organismos/sidebar/SidebarCard.jsx';
 
 
 export * from './components/atomos/Icono';
+export * from './components/atomos/Title';
 export * from './components/moleculas/Btnsave';
+export * from './components/moleculas/CardDatosEmpresa';
+
 export * from './components/templates/HomeTemplate';
 
 export * from './store/AuthStore';
@@ -44,9 +47,12 @@ export * from './pages/Login';
 export * from './pages/PageBase';
 
 export * from './hooks/ProtectedRoute'
-
+export * from './components/moleculas/BtnCircular'
 
 export { InsertarUsuarios } from './supabase/crudUsuarios';
 export * from './components/organismos/formularios/InputText';
 export * from './components/organismos/FooterLogin';
+export * from './components/organismos/ListaMenuDesplegable';
+export * from './components/organismos/BannerEmpresa';
+export * from './components/organismos/Header';
 export * from './components/organismos/formularios/RegistrarAdmin';
