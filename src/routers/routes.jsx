@@ -1,6 +1,8 @@
 import {Routes, Route} from "react-router-dom";
 import {Home, Login, ProtectedRoute, UserAuth, useUsuariosStore} from "../index";
 import { useQuery } from "@tanstack/react-query";
+import { SpinnerLoader } from "../components/moleculas/SpinnerLoader";
+import { ErrorMolecula } from "../components/moleculas/ErrorMolecula";
 export function MyRoutes(){
     const { user } = UserAuth();
     const {mostrarUsuarios}=useUsuariosStore();
@@ -9,7 +11,10 @@ export function MyRoutes(){
       queryFn:mostrarUsuarios,
     });
     if (isLoading){
-      return
+      return <SpinnerLoader/>
+    }
+    if (error){
+      return <ErrorMolecula mensaje={error.message}/>
     }
     return (
       <Routes>
