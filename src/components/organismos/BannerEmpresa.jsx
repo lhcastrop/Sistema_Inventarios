@@ -3,7 +3,7 @@ import { v } from "../../styles/variables";
 import { CardDatosEmpresa } from "../../index";
 import { useEmpresaStore } from "../../index";
 export function BannerEmpresa() {
-  const { dataempresa } = useEmpresaStore();
+  const { dataempresa, contadorusuarios } = useEmpresaStore();
   return (
     <Container>
       <div className="content-wrapper-context">
@@ -15,9 +15,15 @@ export function BannerEmpresa() {
           En esta pagina puedes gestionar el inventario de tu empresa
         </div>
         <ContentCards>
-          <CardDatosEmpresa titulo="Moneda" valor="$" />
+          <CardDatosEmpresa
+            titulo="Moneda"
+            valor={dataempresa.empresa?.simbolomoneda}
+          />
 
-          <CardDatosEmpresa titulo="Usuarios" valor="100" />
+          <CardDatosEmpresa
+            titulo="Usuarios"
+            valor="{dataempresa.empresa?.contadorusuarios}"
+          />
         </ContentCards>
       </div>
       <svg

@@ -34,11 +34,9 @@ export * from './components/moleculas/CardDatosEmpresa';
 
 export * from './components/templates/HomeTemplate';
 
-export * from './store/AuthStore';
 
 
 
-export * from './store/UsuariosStore';
 
 export * from './components/templates/LoginTemplate';
 
@@ -46,8 +44,8 @@ export * from './components/templates/LoginTemplate';
 export * from './pages/Login';
 export * from './pages/PageBase';
 
-export * from './hooks/ProtectedRoute'
-export * from './components/moleculas/BtnCircular'
+export * from './hooks/ProtectedRoute';
+export * from './components/moleculas/BtnCircular';
 
 export { InsertarUsuarios } from './supabase/crudUsuarios';
 export * from './components/organismos/formularios/InputText';
@@ -57,15 +55,17 @@ export * from './components/organismos/BannerEmpresa';
 export * from './components/organismos/Header';
 export * from './components/organismos/formularios/RegistrarAdmin';
 
-export * from './components/moleculas/ErrorMolecula'
-export * from './components/moleculas/SpinnerLoader'
+export * from './components/moleculas/ErrorMolecula';
+export * from './components/moleculas/SpinnerLoader';
 
-export * from './store/UsuariosStore'
-export * from './store/EmpresaStore'
-export * from './store/AuthStore'
+export * from './store/UsuariosStore';
+export * from './store/EmpresaStore';
+export * from './store/AuthStore';
 
-export * from './supabase/crudEmpresa'
-export * from './supabase/crudUsuarios'
+export * from './supabase/crudEmpresa';
+export * from './supabase/crudUsuarios';
+export * from './supabase/globalsupabase';
+export * from './supabase/supabase.config';
 
 
 

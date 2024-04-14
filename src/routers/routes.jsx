@@ -25,7 +25,7 @@ export function MyRoutes() {
 
   const { data: dataempresa } = useQuery({
     queryKey: ["mostrar empresa"],
-    queryFn: () => mostrarEmpresa({ idusaurio: idusuario }),
+    queryFn: () => mostrarEmpresa({ idusaurio: idusaurio }),
     enabled: !!datausuarios,
   });
 

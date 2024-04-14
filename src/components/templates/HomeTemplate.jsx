@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { BannerEmpresa, Btnsave, useAuthStore } from "../../index";
+import { BannerEmpresa } from "../../index";
 import { Header, Title } from "../../index";
 import { useState } from "react";
 export function HomeTemplate() {
   const [state, setState] = useState(false);
-
   return (
     <Container>
       <header className="header">
@@ -15,7 +14,6 @@ export function HomeTemplate() {
       <section className="area1">
         <Title>Repuestos JaLeo</Title>
       </section>
-
 
       <section className="main">
         <BannerEmpresa />
