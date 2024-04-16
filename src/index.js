@@ -20,12 +20,10 @@ export { MyRoutes } from './routers/routes';
 export { DataModulosConfiguracion, DesplegableUser, LinksArray, SecondarylinksArray, TemasData, TipoDocData, TipouserData } from './utils/dataEstatica';
 
 
-
 export * from './components/organismos/MenuHambur';
 export * from './components/organismos/ToogleTema';
 export * from './components/organismos/sidebar/Sidebar';
 export * from './components/organismos/sidebar/SidebarCard';
-
 
 export * from './components/atomos/Icono';
 export * from './components/atomos/Title';
@@ -33,16 +31,18 @@ export * from './components/moleculas/Btnsave';
 export * from './components/moleculas/CardDatosEmpresa';
 
 export * from './components/templates/HomeTemplate';
-
+export * from './components/templates/ConfiguracionTemplate';
+export * from './components/templates/MarcaTemplate';
 
 
 
 
 export * from './components/templates/LoginTemplate';
 
-
 export * from './pages/Login';
 export * from './pages/PageBase';
+export * from './pages/Configuracion';
+export * from './pages/Marca';
 
 export * from './hooks/ProtectedRoute';
 export * from './components/moleculas/BtnCircular';
@@ -64,8 +64,5 @@ export * from './store/AuthStore';
 
 export * from './supabase/crudEmpresa';
 export * from './supabase/crudUsuarios';
-export * from './supabase/globalsupabase';
+export * from './supabase/globalSupabase';
 export * from './supabase/supabase.config';
-
-
-

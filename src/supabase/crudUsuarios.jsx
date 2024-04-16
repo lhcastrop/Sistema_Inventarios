@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 import { supabase } from "../index";
-import { ObtenerIdAuthSupabase } from "./globalsupabase";
+import { ObtenerIdAuthSupabase } from "./globalSupabase";
 export const InsertarUsuarios = async (p) => {
   const { data, error } = await supabase
     .from("usuarios")

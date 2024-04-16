@@ -22,7 +22,7 @@ export function BannerEmpresa() {
 
           <CardDatosEmpresa
             titulo="Usuarios"
-            valor="{dataempresa.empresa?.contadorusuarios}"
+            valor={contadorusuarios}
           />
         </ContentCards>
       </div>
