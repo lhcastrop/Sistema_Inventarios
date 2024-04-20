@@ -27,7 +27,10 @@ export * from './components/organismos/sidebar/SidebarCard';
 
 export * from './components/atomos/Icono';
 export * from './components/atomos/Title';
+export * from './components/atomos/ContentFiltro';
+export * from './components/atomos/AccionTabla';
 export * from './components/moleculas/Btnsave';
+export * from './components/moleculas/Btnfiltro';
 export * from './components/moleculas/CardDatosEmpresa';
 
 export * from './components/templates/HomeTemplate';
