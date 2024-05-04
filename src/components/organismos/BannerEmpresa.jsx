@@ -1,9 +1,22 @@
 import styled from "styled-components";
 import { v } from "../../styles/variables";
-import { CardDatosEmpresa } from "../../index";
-import { useEmpresaStore } from "../../index";
+import { CardDatosEmpresa } from "../moleculas/CardDatosEmpresa";
+import { useEmpresaStore } from "../../store/EmpresaStore";
+import { useQuery } from "@tanstack/react-query";
+
 export function BannerEmpresa() {
-  const { dataempresa, contadorusuarios } = useEmpresaStore();
+  const { dataempresa } = useEmpresaStore();
+
+  const { contarusuariosXempresa } = useEmpresaStore();
+  const { data } = useQuery({
+    queryKey: [
+      "contar usuarios por empresa",
+      { idempresa: dataempresa.empresa?.id },
+    ],
+    queryFn: () =>
+      contarusuariosXempresa({ id_empresa: dataempresa.empresa?.id }),
+    enabled: !!dataempresa,
+  });
   return (
     <Container>
       <div className="content-wrapper-context">
@@ -20,10 +33,7 @@ export function BannerEmpresa() {
             valor={dataempresa.empresa?.simbolomoneda}
           />
 
-          <CardDatosEmpresa
-            titulo="Usuarios"
-            valor="{dataempresa.empresa?.contadorusuarios}"
-          />
+          <CardDatosEmpresa titulo="Usuarios" valor={data} />
         </ContentCards>
       </div>
       <svg

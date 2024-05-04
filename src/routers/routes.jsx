@@ -1,18 +1,20 @@
 import { Routes, Route } from "react-router-dom";
 import {
+  Configuracion,
   Home,
   Login,
+  Marca,
   ProtectedRoute,
   UserAuth,
   useUsuariosStore,
-  useEmpresaStore,
-  SpinnerLoader,
-  ErrorMolecula,
 } from "../index";
 import { useQuery } from "@tanstack/react-query";
+import { SpinnerLoader } from "../components/moleculas/SpinnerLoader";
+import { ErrorMolecula } from "../components/moleculas/ErrorMolecula";
+import { useEmpresaStore } from "../store/EmpresaStore";
 export function MyRoutes() {
   const { user } = UserAuth();
-  const { mostrarUsuarios, idusaurio } = useUsuariosStore();
+  const { mostrarUsuarios, idusuario } = useUsuariosStore();
   const { mostrarEmpresa } = useEmpresaStore();
   const {
     data: datausuarios,
@@ -22,13 +24,11 @@ export function MyRoutes() {
     queryKey: ["mostrar usuarios"],
     queryFn: mostrarUsuarios,
   });
-
   const { data: dataempresa } = useQuery({
     queryKey: ["mostrar empresa"],
-    queryFn: () => mostrarEmpresa({ idusaurio: idusaurio }),
+    queryFn: () => mostrarEmpresa({ idusuario: idusuario }),
     enabled: !!datausuarios,
   });
-
   if (isLoading) {
     return <SpinnerLoader />;
   }
@@ -40,6 +40,8 @@ export function MyRoutes() {
       <Route path="/login" element={<Login />} />
       <Route element={<ProtectedRoute user={user} redirectTo="/login" />}>
         <Route path="/" element={<Home />} />
+        <Route path="/configurar" element={<Configuracion />} />
+        <Route path="/configurar/marca" element={<Marca />} />
       </Route>
     </Routes>
   );

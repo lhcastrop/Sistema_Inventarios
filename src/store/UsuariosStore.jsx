@@ -1,5 +1,6 @@
 import { create } from "zustand";
-import { InsertarUsuarios, MostrarUsuarios, supabase } from "../index";
+import { InsertarUsuarios, supabase } from "../index";
+import { MostrarUsuarios } from "../supabase/crudUsuarios";
 
 export const useUsuariosStore = create((set, get) => ({
   insertarUsuarioAdmin: async (p) => {
