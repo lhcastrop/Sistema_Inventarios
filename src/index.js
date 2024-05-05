@@ -86,3 +86,11 @@ export * from "./components/atomos/ContentFiltro";
 export * from "./components/organismos/Buscador";
 
 export * from "./components/organismos/tablas/Paginacion";
+
+export * from "./components/templates/CategoriasTemplate";
+export * from "./pages/Categorias";
+export * from "./store/CategoriasStore";
+export * from "./supabase/crudCategorias";
+export * from "./components/organismos/formularios/RegistrarCategorias";
+export * from "./components/organismos/tablas/TablaCategorias";
+export * from "./components/atomos/Colorcontent";
