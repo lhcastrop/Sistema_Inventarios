@@ -6,12 +6,12 @@ export const useEmpresaStore = create((set, get) => ({
   dataempresa: [],
   mostrarEmpresa: async (p) => {
     const response = await MostrarEmpresa(p);
-    set({ dataempresa: response });
-    return response;
+    set({ dataempresa: response.empresa });
+    return response.empresa;
   },
   contarusuariosXempresa: async (p) => {
     const response = await ContarUsuariosXempresa(p);
-    set({ contadorusuarios: response.empresa });
+    set({ contadorusuarios: response });
     return response;
   },
 }));

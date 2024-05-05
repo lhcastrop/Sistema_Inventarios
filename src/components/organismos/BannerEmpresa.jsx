@@ -5,16 +5,12 @@ import { useEmpresaStore } from "../../store/EmpresaStore";
 import { useQuery } from "@tanstack/react-query";
 
 export function BannerEmpresa() {
-  const { dataempresa } = useEmpresaStore();
+  const { dataempresa, contadorusuarios } = useEmpresaStore();
 
   const { contarusuariosXempresa } = useEmpresaStore();
   const { data } = useQuery({
-    queryKey: [
-      "contar usuarios por empresa",
-      { idempresa: dataempresa.empresa?.id },
-    ],
-    queryFn: () =>
-      contarusuariosXempresa({ id_empresa: dataempresa.empresa?.id }),
+    queryKey: ["contar usuarios por empresa", { idempresa: dataempresa?.id }],
+    queryFn: () => contarusuariosXempresa({ id_empresa: dataempresa?.id }),
     enabled: !!dataempresa,
   });
   return (
@@ -22,7 +18,7 @@ export function BannerEmpresa() {
       <div className="content-wrapper-context">
         <span className="titulo">
           {<v.iconoempresa />}
-          {dataempresa.empresa?.nombre}
+          {dataempresa?.nombre}
         </span>
         <div className="content-text">
           En esta pagina puedes gestionar el inventario de tu empresa
@@ -30,7 +26,7 @@ export function BannerEmpresa() {
         <ContentCards>
           <CardDatosEmpresa
             titulo="Moneda"
-            valor={dataempresa.empresa?.simbolomoneda}
+            valor={dataempresa?.simbolomoneda}
           />
 
           <CardDatosEmpresa titulo="Usuarios" valor={data} />

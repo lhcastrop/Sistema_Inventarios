@@ -75,3 +75,14 @@ export * from "./pages/Marca";
 export * from "./components/templates/MarcaTemplate";
 export * from "./store/MarcaStore";
 export * from "./components/organismos/tablas/TablaMarca";
+export * from "./components/organismos/ContentAccionesTabla";
+export * from "./components/atomos/AccionTabla";
+export * from "./supabase/crudMarca";
+export * from "./components/organismos/formularios/RegistrarMarca";
+
+export * from "./utils/Conversiones";
+export * from "./components/moleculas/Btnfiltro";
+export * from "./components/atomos/ContentFiltro";
+export * from "./components/organismos/Buscador";
+
+export * from "./components/organismos/tablas/Paginacion";

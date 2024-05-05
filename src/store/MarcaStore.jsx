@@ -5,7 +5,7 @@ import {
   EliminarMarca,
   InsertarMarca,
   MostrarMarca,
-} from "../supabase/crudMarca";
+} from "../index";
 export const useMarcaStore = create((set, get) => ({
   buscador: "",
   setBuscador: (p) => {
