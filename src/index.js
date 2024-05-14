@@ -94,3 +94,15 @@ export * from "./supabase/crudCategorias";
 export * from "./components/organismos/formularios/RegistrarCategorias";
 export * from "./components/organismos/tablas/TablaCategorias";
 export * from "./components/atomos/Colorcontent";
+
+export * from "./components/templates/ProductosTemplate";
+export * from "./pages/Productos.jsx";
+export * from "./supabase/crudProductos";
+export * from "./store/ProductosStore";
+export * from "./components/organismos/tablas/TablasProductos";
+export * from "./components/atomos/ColorcontentTable";
+export * from "./components/organismos/formularios/RegistrarProductos";
+export * from "./components/atomos/ContainerSelector";
+export * from "./components/organismos/tablas/ListaGenerica";
+export * from "./components/atomos/BtnCerrar";
+export * from "./components/organismos/tablas/Selector";
