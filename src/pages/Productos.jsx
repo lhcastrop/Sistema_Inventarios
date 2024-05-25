@@ -12,8 +12,8 @@ export function Productos() {
     useProductosStore();
   const { dataempresa } = useEmpresaStore();
   const { isLoading, error } = useQuery({
-    queryKey: ["mostrar productos", { id_empresa: dataempresa?.id }],
-    queryFn: () => mostrarproductos({ id_empresa: dataempresa?.id }),
+    queryKey: ["mostrar productos", { _id_empresa: dataempresa?.id }],
+    queryFn: () => mostrarproductos({ _id_empresa: dataempresa?.id }),
     enabled: dataempresa?.id != null,
   });
   const { data: buscardata } = useQuery({
@@ -22,7 +22,7 @@ export function Productos() {
       { id_empresa: dataempresa.id, descripcion: buscador },
     ],
     queryFn: () =>
-      buscarproductos({ id_empresa: dataempresa.id, descripcion: buscador }),
+      buscarproductos({ _id_empresa: dataempresa.id, buscador: buscador }),
     enabled: dataempresa.id != null,
   });
   const { data: datamarcas } = useQuery({

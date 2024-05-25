@@ -12,6 +12,7 @@ import {
   useMarcaStore,
   TablaProductos,
   RegistrarProductos,
+  useProductosStore,
 } from "../../index";
 import { Header } from "../../index";
 import { useState } from "react";
@@ -25,7 +26,7 @@ export function ProductosTemplate({ data }) {
     setAccion("Nuevo");
     setdataSelect([]);
   };
-  const { setBuscador } = useMarcaStore();
+  const { setBuscador } = useProductosStore();
 
   return (
     <Container>
