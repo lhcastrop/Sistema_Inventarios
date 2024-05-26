@@ -106,3 +106,12 @@ export * from "./components/atomos/ContainerSelector";
 export * from "./components/organismos/tablas/ListaGenerica";
 export * from "./components/atomos/BtnCerrar";
 export * from "./components/organismos/tablas/Selector";
+
+export * from "./components/templates/UsuariosTemplate.jsx";
+export * from "./pages/Usuarios.jsx";
+export * from "./store/UsuariosStore";
+export * from "./supabase/crudUsuarios";
+export * from "./components/organismos/formularios/RegistrarUsuarios";
+export * from "./components/organismos/tablas/TablaUsuarios";
+export * from "./components/organismos/ListaModulos";
+export * from "./components/moleculas/BloqueoPagina";

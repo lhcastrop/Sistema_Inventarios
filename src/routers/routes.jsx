@@ -5,6 +5,7 @@ import {
   Home,
   Login,
   Marca,
+  Usuarios,
   Productos,
   ProtectedRoute,
   UserAuth,
@@ -16,7 +17,7 @@ import { ErrorMolecula } from "../components/moleculas/ErrorMolecula";
 import { useEmpresaStore } from "../store/EmpresaStore";
 export function MyRoutes() {
   const { user } = UserAuth();
-  const { mostrarUsuarios, idusuario } = useUsuariosStore();
+  const { mostrarUsuarios, idusuario, mostrarpermisos } = useUsuariosStore();
   const { mostrarEmpresa } = useEmpresaStore();
   const {
     data: datausuarios,
@@ -31,6 +32,12 @@ export function MyRoutes() {
     queryFn: () => mostrarEmpresa({ idusuario: idusuario }),
     enabled: !!datausuarios,
   });
+  const { data: datapermisos } = useQuery({
+    queryKey: ["mostrar permisos", { id_usuario: idusuario }],
+    queryFn: () => mostrarpermisos({ id_usuario: idusuario }),
+    enabled: !!datausuarios,
+  });
+
   if (isLoading) {
     return <SpinnerLoader />;
   }
@@ -46,6 +53,7 @@ export function MyRoutes() {
         <Route path="/configurar/marca" element={<Marca />} />
         <Route path="/configurar/categorias" element={<Categorias />} />
         <Route path="/configurar/productos" element={<Productos />} />
+        <Route path="/configurar/personal" element={<Usuarios />} />
       </Route>
     </Routes>
   );
