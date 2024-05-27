@@ -115,3 +115,5 @@ export * from "./components/organismos/formularios/RegistrarUsuarios";
 export * from "./components/organismos/tablas/TablaUsuarios";
 export * from "./components/organismos/ListaModulos";
 export * from "./components/moleculas/BloqueoPagina";
+
+export * from "./components/moleculas/Mensaje";
