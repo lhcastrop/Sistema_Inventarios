@@ -38,9 +38,9 @@ export function Usuarios() {
     queryKey: ["mostrar modulos"],
     queryFn: mostrarModulos,
   });
-  //if (statePermiso == false) {
-  //return <BloqueoPagina />;
-  //}
+  if (statePermiso == false) {
+    return <BloqueoPagina />;
+  }
   if (isLoading) {
     return <SpinnerLoader />;
   }
