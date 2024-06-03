@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { supabase } from "../index";
+import { Login, supabase } from "../index";
 const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
@@ -11,8 +11,11 @@ export const AuthContextProvider = ({ children }) => {
         if (session?.user == null) {
           setUser(null);
         } else {
-          console.log("data del usuario", session?.user);
           setUser(session?.user);
+          console.log("event", event);
+          console.log("session USER", session?.user);
+          //console.log("data del usuario", session?.user);
+          //setUser(session?.user);
         }
       }
     );

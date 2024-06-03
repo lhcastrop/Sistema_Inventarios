@@ -55,6 +55,6 @@ export function Kardex() {
   if (error) {
     return <span>Error...</span>;
   }
-  //if (statePermiso == false) return <BloqueoPagina state={statePermiso} />;
+  if (statePermiso == true) return <BloqueoPagina state={statePermiso} />;
   return <KardexTemplate data={dataproductos} />;
 }

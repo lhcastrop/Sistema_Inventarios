@@ -32,10 +32,16 @@ export const useUsuariosStore = create((set, get) => ({
     return datauser;
   },
   idusuario: 0,
+  datausuarios: [],
   mostrarUsuarios: async () => {
     const response = await MostrarUsuarios();
-    set({ idusuario: response.id });
-    return response;
+    set({ datausuarios: response });
+    if (response) {
+      set({ idusuario: response.id });
+      return response;
+    } else {
+      return [];
+    }
   },
   buscador: "",
   setBuscador: (p) => {

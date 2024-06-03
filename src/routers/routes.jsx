@@ -12,6 +12,7 @@ import {
   useUsuariosStore,
   Kardex,
   Reportes,
+  Empresa,
 } from "../index";
 import { useQuery } from "@tanstack/react-query";
 import { SpinnerLoader } from "../components/moleculas/SpinnerLoader";
@@ -40,7 +41,7 @@ export function MyRoutes() {
     enabled: !!datausuarios,
   });
 
-  if (isLoading) {
+  if (isLoading == true) {
     return <SpinnerLoader />;
   }
   if (error) {
@@ -53,6 +54,7 @@ export function MyRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/configurar" element={<Configuracion />} />
         <Route path="/configurar/marca" element={<Marca />} />
+        <Route path="/configurar/empresa" element={<Empresa />} />
         <Route path="/configurar/categorias" element={<Categorias />} />
         <Route path="/configurar/productos" element={<Productos />} />
         <Route path="/configurar/personal" element={<Usuarios />} />

@@ -133,3 +133,6 @@ export { useKardexStore } from "./store/KardexStore";
 export * from "./components/templates/ReportesTemplate";
 export * from "./pages/Reportes";
 export * from "./components/organismos/report/ReporteKardex";
+
+export * from "./pages/Empresa";
+export * from "./components/templates/EmpresaTemplate";
